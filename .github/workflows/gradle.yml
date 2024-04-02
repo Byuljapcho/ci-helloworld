@@ -37,7 +37,19 @@ jobs:
         uses: cicirello/jacoco-badge-generator@v2.9.0
         with:
           jacoco-csv-file: build/reports/jacoco/test/jacocoTestReport.csv
-          fail-if-branches-less-than: 100
+          fail-on-branches-decrease: true
+          fail-on-coverage-decrease: true
+          generate-summary: true
+      - name: check for changes
+        run: git status
+      - name: stage changed files
+        run: git add .
+      - name: commit changed files
+        run: git commit -m "Auto updating TODO.txt"
+      - name: fetch from master
+        run: git fetch origin master
+      - name: push code to master
+        run: git push origin HEAD:master
 
   build_and_publish_docker_image:
     name: Publish to Docker Hub
