@@ -55,4 +55,10 @@ public class ArrayUtilsTest {
     public void testCountOfArrayContainsTarget() {
         assertEquals(2, ArrayUtils.countOf(new int[]{5, 7, 5, 10, -3}, 5));
     }
+
+    @Test
+    public void testArrayUtilsInstantiation() {
+        ArrayUtils arrayUtils = new ArrayUtils();
+        assertNotNull(arrayUtils);
+    }
 }
