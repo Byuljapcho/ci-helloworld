@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ArrayUtilsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-04-02T00:09:39" hostname="MK-Macbook-Pro.local" time="0.017">
+  <properties/>
+  <testcase name="testFindLastNull()" classname="ArrayUtilsTest" time="0.011"/>
+  <testcase name="testFindLastEmpty()" classname="ArrayUtilsTest" time="0.001"/>
+  <testcase name="testOddOrPositiveBothPositivesAndNegatives()" classname="ArrayUtilsTest" time="0.0"/>
+  <testcase name="testFindLastNonExistent()" classname="ArrayUtilsTest" time="0.001"/>
+  <testcase name="testOddOrPosAllPositives()" classname="ArrayUtilsTest" time="0.0"/>
+  <testcase name="testOddOrPosNull()" classname="ArrayUtilsTest" time="0.0"/>
+  <testcase name="testFindLastExistsFirstElement()" classname="ArrayUtilsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
