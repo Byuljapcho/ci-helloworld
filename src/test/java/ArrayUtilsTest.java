@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class ArrayUtilsTest {
 
@@ -60,5 +62,28 @@ public class ArrayUtilsTest {
     public void testArrayUtilsInstantiation() {
         ArrayUtils arrayUtils = new ArrayUtils();
         assertNotNull(arrayUtils);
+    }
+
+    @Test
+    public void testMainInstantiation() {
+        Main m = new Main();
+        assertNotNull(m);
+    }
+
+    @Test
+    public void testMainMethodOutput() {
+        // Redirect System.out to capture the output
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        // Call the main method
+        Main.main(new String[]{});
+
+        // Reset System.out
+        System.setOut(originalOut);
+
+        // Assert the output
+        assertEquals("Main Executed!\n", outputStream.toString());
     }
 }
